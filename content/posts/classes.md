@@ -90,8 +90,6 @@ class Human extends Mammal {
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
-
 ### Use method chaining
 
 This pattern is very useful in JavaScript and you see it in many libraries such
@@ -170,8 +168,6 @@ class Car {
 const car = new Car("Ford", "F-150", "red").setColor("pink").save();
 ```
 
-**[⬆ back to top](#table-of-contents)**
-
 ### Prefer composition over inheritance
 
 As stated famously in [_Design Patterns_](https://en.wikipedia.org/wiki/Design_Patterns) by the Gang of Four,
@@ -239,5 +235,3 @@ class Employee {
   // ...
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
