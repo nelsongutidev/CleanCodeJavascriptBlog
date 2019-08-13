@@ -49,7 +49,6 @@ query {
         title
         timeToRead
         description
-        date (format: "D MMMM YYYY")
         path
         order
       }

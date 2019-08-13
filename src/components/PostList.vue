@@ -1,7 +1,7 @@
 <template>
   <div class="post-list">
     <hr class="line" />
-    <p class="date" v-html="post.date" />
+    <p class="date">Part {{ post.order }}</p>
     <h1 class="title" v-html="post.title" />
     <p class="description" v-html="post.description" />
     <b>{{post.timeToRead}} min read</b> &nbsp;
@@ -28,12 +28,14 @@ export default {
 .read {
   padding: 7px;
   color: #333;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: hsl(208, 59%, 26%);
 }
 
 .read:hover {
   border-bottom: 3px solid hsl(208, 59%, 80%);
   background-color: hsl(208, 59%, 20%);
   color: whitesmoke;
+  text-decoration: none;
 }
 </style>
