@@ -41,4 +41,10 @@ query Post ($path: String!) {
 .post-content {
   font-size: 18px;
 }
+
+@media screen and (max-width: 650px) {
+  .post-content {
+    font-size: 0.8rem;
+  }
+}
 </style>
