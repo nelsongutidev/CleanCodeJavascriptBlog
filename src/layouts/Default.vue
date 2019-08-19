@@ -41,8 +41,8 @@ body {
 }
 
 .link:hover {
-  border-bottom: 3px solid hsl(208, 59%, 80%);
   background-color: hsl(208, 59%, 20%);
+  border-radius: 10px;
   color: whitesmoke;
   text-decoration: none;
 }
