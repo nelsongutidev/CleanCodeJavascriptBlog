@@ -3,6 +3,7 @@ title: "Classes"
 description: "Classes over ES5 plain functions"
 date: 2019-08-12
 order: 5
+lang: "en"
 ---
 
 ## **Classes**

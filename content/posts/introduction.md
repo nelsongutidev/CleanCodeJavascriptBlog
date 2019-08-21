@@ -3,6 +3,7 @@ title: "Introduction"
 description: "Introduction to Clean code Javascript."
 date: 2019-08-12
 order: 1
+lang: "en"
 ---
 
 <img style="width:100%"

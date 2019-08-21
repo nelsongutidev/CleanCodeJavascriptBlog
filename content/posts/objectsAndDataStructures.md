@@ -3,6 +3,7 @@ title: "Objects and Data Structures"
 description: "The importance of Objects and Data Structures explained"
 date: 2019-08-12
 order: 4
+lang: "en"
 ---
 
 ## **Objects and Data Structures**

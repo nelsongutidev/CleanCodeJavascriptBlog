@@ -3,6 +3,7 @@ title: "Variables"
 description: "Variables and Clean Code with JS."
 date: 2019-08-12
 order: 2
+lang: "en"
 ---
 
 ## **Variables**

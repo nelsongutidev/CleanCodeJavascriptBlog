@@ -3,6 +3,7 @@ title: "Functions"
 description: "Functions and Clean Code with JS."
 date: 2019-08-12
 order: 3
+lang: "en"
 ---
 
 ## **Functions**
