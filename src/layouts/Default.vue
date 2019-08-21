@@ -1,5 +1,6 @@
 <template>
   <div class="layout">
+    <GithubCorner />
     <slot />
     <div class="footer">
       <p>
@@ -10,13 +11,24 @@
   </div>
 </template>
 
+<script>
+import GithubCorner from "@/components/GithubCorner";
+import LanguageToggle from "@/components/LanguageToggle";
+
+export default {
+  components: {
+    GithubCorner,
+    LanguageToggle
+  }
+};
+</script>
+
 <style>
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  border: 5px solid rgb(28, 70, 107);
   min-height: 100vh;
 }
 

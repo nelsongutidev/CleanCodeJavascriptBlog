@@ -1,36 +1,67 @@
 <template>
   <Layout>
     <header class="header">
+      <GithubCorner />
+      <LanguageToggle @clicked="changeLanguage" />
+      <!-- <button @click="dataFilter">data</button> -->
       <h1 v-html="$page.metaData.siteName" />
-      <p>
-        A guide to producing readable, reusable, and refactorable
-        software in JavaScript by
-        <a
-          class="link"
-          href="https://twitter.com/ryconoclast"
-        >Ryan McDermott</a>
-      </p>
-      <p>
-        I am by all means
-        <span>not</span> the author of any of these posts. Instead,
-        I am a JS developer who has found HUGE value in them.
-        I have created this site to make the information more accesible to more people and have it in blog form.
-      </p>
+
+      <Header :language="language" />
     </header>
-    <section class="posts">
+    <!-- <section class="posts">
       <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
+    </section>-->
+    <section class="posts">
+      <PostList v-for="edge in blogPosts" :key="edge.node.id" :post="edge.node" />
     </section>
   </Layout>
 </template>
 
 <script>
 import PostList from "@/components/PostList";
+import GithubCorner from "@/components/GithubCorner";
+import LanguageToggle from "@/components/LanguageToggle";
+import Header from "@/components/Header";
+
 export default {
+  data() {
+    return {
+      language: "en",
+      posts: []
+    };
+  },
+  computed: {
+    blogPosts: function() {
+      return this.$page.allPost.edges.filter(
+        edge => edge.node.lang === this.language
+      );
+    }
+  },
   components: {
-    PostList
+    PostList,
+    GithubCorner,
+    LanguageToggle,
+    Header
   },
   metaInfo: {
     title: "Clean Code Javascript"
+  },
+  methods: {
+    changeLanguage: function() {
+      if (this.language === "en") {
+        this.language = "es";
+      } else {
+        this.language = "en";
+      }
+      console.log("hello");
+    },
+    dataFilter() {
+      console.log(
+        this.$page.allPost.edges.filter(
+          edge => edge.node.lang === this.language
+        )
+      );
+    }
   }
 };
 </script>
@@ -51,6 +82,7 @@ query {
         description
         path
         order
+        lang
       }
     }
 
@@ -69,7 +101,8 @@ query {
 }
 
 .header h1 {
-  font-size: 3rem;
+  margin-top: 4rem;
+  font-size: 2.5rem;
 }
 
 .header span {
