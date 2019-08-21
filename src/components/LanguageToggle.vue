@@ -1,6 +1,6 @@
 <template>
   <div class="toggle-switch">
-    <button @click="toggleLanguage">{{lang}}</button>
+    <button v-bind:class="{'spanish' : (lang === 'Español')}" @click="toggleLanguage">{{lang}}</button>
   </div>
 </template>
 
@@ -36,17 +36,22 @@ button {
   text-transform: uppercase;
   text-decoration: none;
   background: rgb(28, 70, 107);
-  padding: 15px;
+  padding: 12px;
   border-radius: 50px;
   display: inline-block;
   border: 1px solid #fff;
   transition: all 0.4s ease 0s;
 }
 
-button:hover {
+.spanish {
   background: #ededed;
   border: 1px solid rgb(28, 70, 107);
   color: rgb(28, 70, 107);
 }
+
+button:focus {
+  outline: 0;
+}
 </style>
+
 
