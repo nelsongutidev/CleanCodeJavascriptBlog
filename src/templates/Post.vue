@@ -1,7 +1,14 @@
 <template>
   <Layout>
     <br />
-    <g-link to="/" class="link">&larr; Go Back</g-link>
+
+    <div v-if="language === 'en'">
+      <g-link to="/" class="link">&larr; Go Back</g-link>
+    </div>
+    <div v-else>
+      <g-link to="/es" class="link">&larr; Atras</g-link>
+    </div>
+
     <div class="post-title">
       <h1>{{$page.post.title}}</h1>
       <p class="post-date">{{ $page.post.date}} | {{$page.post.timeToRead}} min read</p>
@@ -9,7 +16,12 @@
     <div class="post-content">
       <p v-html="$page.post.content" />
     </div>
-    <g-link to="/" class="link">&larr; Go Back</g-link>
+    <div v-if="language === 'en'">
+      <g-link to="/" class="link">&larr; Go Back</g-link>
+    </div>
+    <div v-else>
+      <g-link to="/es" class="link">&larr; Atras</g-link>
+    </div>
   </Layout>
 </template>
 
@@ -25,6 +37,21 @@ query Post ($path: String!) {
   }
 }
 </page-query>
+
+<script>
+import PostList from "@/components/PostList";
+import GithubCorner from "@/components/GithubCorner";
+import LanguageToggle from "@/components/LanguageToggle";
+import Header from "@/components/Header";
+
+export default {
+  computed: {
+    language: function() {
+      return this.$page.post.lang;
+    }
+  }
+};
+</script>
 
 <style>
 .post-title {

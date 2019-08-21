@@ -27,7 +27,7 @@
       sobre Clean Code JS.
     </p>
     <p>
-      Yo debo aclarar que
+      Debo aclarar que
       <span>no</span> soy el autor de ninguno de estos posts. Mas bien,
       soy un desarrollador de JS que ha encontrado enorme valor en ellos y ha querido crear un sitio
       para difundir mas y mas estas ideas.
