@@ -1,17 +1,10 @@
 <template>
   <Layout>
     <header class="header">
-      <GithubCorner />
-      <!-- <LanguageToggle @clicked="changeLanguage" /> -->
       <g-link class="g-link" to="/es">Version en Español &rarr;</g-link>
-      <!-- <button @click="dataFilter">data</button> -->
       <h1 v-html="$page.metaData.siteName" />
-
       <Header :language="language" />
     </header>
-    <!-- <section class="posts">
-      <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
-    </section>-->
     <section class="posts">
       <PostList v-for="edge in blogPosts" :key="edge.node.id" :post="edge.node" />
     </section>
@@ -20,15 +13,12 @@
 
 <script>
 import PostList from "@/components/PostList";
-import GithubCorner from "@/components/GithubCorner";
-import LanguageToggle from "@/components/LanguageToggle";
 import Header from "@/components/Header";
 
 export default {
   data() {
     return {
-      language: "en",
-      posts: []
+      language: "en"
     };
   },
   computed: {
@@ -36,31 +26,14 @@ export default {
       return this.$page.allPost.edges.filter(
         edge => edge.node.lang === this.language
       );
-    },
-    setLanguage: function() {
-      if (!this.language) {
-        this.language = "en";
-      }
-      return this.language;
     }
   },
   components: {
     PostList,
-    GithubCorner,
-    LanguageToggle,
     Header
   },
   metaInfo: {
     title: "Clean Code Javascript"
-  },
-  methods: {
-    changeLanguage: function() {
-      if (this.language === "en") {
-        this.language = "es";
-      } else {
-        this.language = "en";
-      }
-    }
   }
 };
 </script>

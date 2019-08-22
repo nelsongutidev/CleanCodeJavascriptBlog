@@ -13,12 +13,10 @@
 
 <script>
 import GithubCorner from "@/components/GithubCorner";
-import LanguageToggle from "@/components/LanguageToggle";
 
 export default {
   components: {
-    GithubCorner,
-    LanguageToggle
+    GithubCorner
   }
 };
 </script>

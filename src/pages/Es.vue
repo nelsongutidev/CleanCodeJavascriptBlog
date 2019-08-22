@@ -1,9 +1,6 @@
 <template>
   <Layout>
     <header class="header">
-      <GithubCorner />
-      <!-- <LanguageToggle @clicked="changeLanguage" /> -->
-
       <g-link class="g-link" to="/">&larr; Back to English Version</g-link>
       <h1 v-html="$page.metaData.siteName" />
       <Header :language="language" />
@@ -16,15 +13,12 @@
 
 <script>
 import PostList from "@/components/PostList";
-import GithubCorner from "@/components/GithubCorner";
-import LanguageToggle from "@/components/LanguageToggle";
 import Header from "@/components/Header";
 
 export default {
   data() {
     return {
-      language: "es",
-      posts: []
+      language: "es"
     };
   },
   computed: {
@@ -36,8 +30,6 @@ export default {
   },
   components: {
     PostList,
-    GithubCorner,
-    LanguageToggle,
     Header
   },
   metaInfo: {

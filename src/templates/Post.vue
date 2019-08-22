@@ -16,6 +16,7 @@
     <div class="post-content">
       <p v-html="$page.post.content" />
     </div>
+
     <div v-if="language === 'en'">
       <g-link to="/" class="link">&larr; Go Back</g-link>
     </div>
@@ -39,11 +40,6 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
-import PostList from "@/components/PostList";
-import GithubCorner from "@/components/GithubCorner";
-import LanguageToggle from "@/components/LanguageToggle";
-import Header from "@/components/Header";
-
 export default {
   computed: {
     language: function() {
