@@ -4,14 +4,24 @@
     <p class="date">Part {{ post.order }}</p>
     <h1 class="title" v-html="post.title" />
     <p class="description" v-html="post.description" />
-    <b>{{post.timeToRead}} min read</b> &nbsp;
-    <g-link :to="post.path" class="read">Read More...</g-link>
+    <div v-if="language === 'en'">
+      <b>{{post.timeToRead}} min read</b> &nbsp;
+      <g-link :to="post.path" class="read">Read More...</g-link>
+    </div>
+    <div v-else>
+      <b>Lectura {{post.timeToRead}} min</b> &nbsp;
+      <g-link :to="post.path" class="read">Leer mas...</g-link>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["post"]
+  /* props: ["post", "language"] */
+  props: {
+    post: Object,
+    language: String
+  }
 };
 </script>
 

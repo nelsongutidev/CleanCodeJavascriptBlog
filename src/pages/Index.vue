@@ -6,7 +6,12 @@
       <Header :language="language" />
     </header>
     <section class="posts">
-      <PostList v-for="edge in blogPosts" :key="edge.node.id" :post="edge.node" />
+      <PostList
+        v-for="edge in blogPosts"
+        :key="edge.node.id"
+        :post="edge.node"
+        :language="language"
+      />
     </section>
   </Layout>
 </template>
