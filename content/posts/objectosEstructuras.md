@@ -1,6 +1,6 @@
 ---
 title: "Objectos y estructuras de datos"
-description: La importancia de Objectos y Estructuras de Datos explicada"
+description: "Buenas Practicas con Objectos y Estructuras de Datos"
 date: 2019-08-12
 order: 4
 lang: "es"

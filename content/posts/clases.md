@@ -1,6 +1,6 @@
 ---
 title: "Clases"
-description: "Clases over ES5 plain functions"
+description: "Prioriza las classes de ES2015/ES6 antes que las funciones planas de ES50"
 date: 2019-08-12
 order: 5
 lang: "es"
