@@ -17,7 +17,6 @@
 
 <script>
 export default {
-  /* props: ["post", "language"] */
   props: {
     post: Object,
     language: String
