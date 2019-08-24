@@ -11,7 +11,7 @@
 
     <div class="post-title">
       <h1>{{$page.post.title}}</h1>
-      <p class="post-date">{{ $page.post.date}} | {{$page.post.timeToRead}} min read</p>
+      <p class="post-date">Part {{ $page.post.order}} | {{$page.post.timeToRead}} min read</p>
     </div>
     <div class="post-content">
       <p v-html="$page.post.content" />
@@ -35,6 +35,7 @@ query Post ($path: String!) {
     date (format: "D MMMM YYYY")
     timeToRead
     lang
+    order
   }
 }
 </page-query>
