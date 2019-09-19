@@ -54,8 +54,6 @@ class Animal {}
 class Alpaca {}
 ```
 
-**[⬆ Volver arriba](#contenido)**
-
 ### Funciones que llaman y funciones que son llamadas, deberían estar cerca
 
 Si una función llama a otra, haz que esta función que va a ser llamada esté

@@ -55,8 +55,6 @@ function hashIt(datos) {
 }
 ```
 
-**[⬆ Volver arriba](#contenido)**
-
 ### No dejes código comentado en tu repositorio
 
 El control de versiones existe para algo. Si tu motivo o excusa por el que comentar
@@ -79,8 +77,6 @@ Bien:
 ```javascript
 hacerCosas();
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### No hagas un diario de comentarios
 
@@ -110,8 +106,6 @@ function combinar(a, b) {
   return a + b;
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Evita los marcadores de secciones
 

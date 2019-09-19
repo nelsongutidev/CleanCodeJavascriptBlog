@@ -61,8 +61,6 @@ get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
   });
 ```
 
-**[⬆ Volver arriba](#contenido)**
-
 ### Async/Await is incluso más limpio que las Promesas
 
 Las promesas son una elección más limpia que los callbacks pero ES2017/ES8
