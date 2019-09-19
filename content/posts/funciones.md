@@ -36,7 +36,7 @@ de desestructuración que nos ofrece ES2015/ES6. Éstas tienen algunas ventajas:
 3. Las herramientas lintera o _linterns_ pueden avisarte de qué propiedades del
    objeto parámetro no están en uso. _Cosa que es imposile sin desestructuración._
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 function crearMenu(titulo, cuerpo, textoDelBoton, cancelable) {
@@ -44,7 +44,7 @@ function crearMenu(titulo, cuerpo, textoDelBoton, cancelable) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function crearMenu({ titulo, cuerpo, textoDelBoton, cancelable }) {
@@ -68,7 +68,7 @@ modificadas y mantenidas con mayor facilidad y tu código será mucho más limpi
 De toda esta guía... si has de aprender algo, que sea esto. Ya estarás mmuy
 por delante de muchos desarrolladores de software.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 function enviarCorreoAClientes(clientes) {
@@ -81,7 +81,7 @@ function enviarCorreoAClientes(clientes) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function enviarCorreoClientesActivos(clientes) {
@@ -96,7 +96,7 @@ function esClienteActivo(cliente) {
 
 ### Los nombres de las funciones deberían decir lo que hacen
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 function añadirAFecha(fecha, mes) {
@@ -109,7 +109,7 @@ const fecha = new Date();
 añadirAFecha(fecha, 1);
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function añadirMesAFecha(mes, fecha) {
@@ -126,7 +126,7 @@ Cuando tienes más de un nivel de abstracción, tu función normalmente está
 hacicendo demasiado. Separarla en funciones más pequeñas te ayudará a poder
 reutilizar código y te facilitará el _testear_ éstas.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 function analizarMejorAlternativaJavascript(codigo) {
@@ -153,7 +153,7 @@ function analizarMejorAlternativaJavascript(codigo) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function analizarMejorAlternativaJavascript(codigo) {
@@ -214,7 +214,7 @@ Dicho esto, si se puede hacer una buena abstracción, ¡Házla! Evita repetirte
 porque de lo contrario, como hemos comentado anteriormente, te verás editando
 en más de un lugar para modificar un comportamiento.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 function mostrarListaDesarrolladores(desarrolladores) {
@@ -248,7 +248,7 @@ function mostrarListaJefes(jefes) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function mostrarListaEmpleados(empleados) {
@@ -277,7 +277,7 @@ function mostrarListaEmpleados(empleados) {
 
 ### Asigna objetos por defecto con Object.assign
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 const configuracionMenu = {
@@ -298,7 +298,7 @@ function crearMenu(config) {
 crearMenu(configuracionMenu);
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 const configuracionMenu = {
@@ -332,7 +332,7 @@ Las banderas o _flags_ te indican de que esa función hace más de una cosa. Ya
 que como vamos repitiendo, nuestras funciones solo deberían hacer una cosa, separa
 esa lógica que es diferenciada por la bandera o _flag_ en una nueva función.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 function crearFichero(nombre, temporal) {
@@ -344,7 +344,7 @@ function crearFichero(nombre, temporal) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function crearFichero(nombre) {
@@ -374,7 +374,7 @@ sin ninguna estructura, usando tipos de datos mutables que pueden ser escritos p
 y no centralizar donde se producen sus efectos secundarios. Si puedes hacer esto, serás
 más feliz que la gran mayoría de otros programadores.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 // Variable Global referenciada por la siguiente función
@@ -391,7 +391,7 @@ separarEnNombreYApellido();
 console.log(nombre); // ['Ryan', 'McDermott'];
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function separarEnNombreYApellido) {
@@ -441,7 +441,7 @@ Dos advertencias que mencionar para este enfoque:
    tipo de enfoque de programación. Es rápido y no requiere tanta memoria como te
    costaría a ti clonar manualmente los arrays y los objetos.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 const añadirObjetoAlCarrito = (carrito, objeto) => {
@@ -449,7 +449,7 @@ const añadirObjetoAlCarrito = (carrito, objeto) => {
 };
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 const añadirObjetoAlCarrito = (carrito, objeto) => {
@@ -469,7 +469,7 @@ librería estaba usando `diff` para encontrar la diferencia entre los elementos 
 y último de una matriz? Tendríamos problemas... Por eso, sería mucho mejor usar las
 clases ES2015 / ES6 y simplemente extender el `Array` global.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 Array.prototype.diff = function diff(matrizDeComparación) {
@@ -478,7 +478,7 @@ Array.prototype.diff = function diff(matrizDeComparación) {
 };
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 class SuperArray extends Array {
@@ -495,7 +495,7 @@ Javascript no es un lenguage funcional en la misma medida que lo es Haskell, per
 tiene aspectos que lo favorecen. Los lenguages funcionales pueden ser más fáciles
 y limpios de _testear_. Favorece este estilo de programación siempre que puedas.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 const datosSalidaProgramadores = [
@@ -524,7 +524,7 @@ for (let i = 0; i < datosSalidaProgramadores.length; i++) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 const datosSalidaProgramadores = [
@@ -553,7 +553,7 @@ const salidaFinal = datosSalidaProgramadores
 
 ### Encapsula los condicionales
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 if (fsm.state === "cogiendoDatos" && estaVacio(listaNodos)) {
@@ -561,7 +561,7 @@ if (fsm.state === "cogiendoDatos" && estaVacio(listaNodos)) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function deberiaMostrarSpinner(fsm, listaNodos) {
@@ -575,7 +575,7 @@ if (deberiaMostrarSpinner(fsmInstance, listNodeInstance)) {
 
 ### Evita condicionales negativos
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 function noEstaElNodoPresente(node) {
@@ -587,7 +587,7 @@ if (!noEstaElNodoPresente(node)) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function estaElNodoPresente(node) {
@@ -610,7 +610,7 @@ hemos visto de _Código limpio_: Una función debería hacer únicamente una cos
 Cuando tienes una función o clase que posee un `if`, le estás diciendo al usuario
 que tu función está haciendo más de una cosa. Recuerda, tan sólo una cosa.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 class Avion {
@@ -628,7 +628,7 @@ class Avion {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 class Avion {
@@ -665,7 +665,7 @@ se vuelve muy tentador el controlar los tipos de los argumentos de la función. 
 algunas soluciones para evitar esto. La primera, son APIs consistentes. Por API se
 entiende de que manera nos comunicamos con ese módulo/función.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 function viajarATexas(vehiculo) {
@@ -677,7 +677,7 @@ function viajarATexas(vehiculo) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function viajarATexas(vehiculo) {
@@ -697,7 +697,7 @@ la legibilidad del código. Mantén tu código `Javascript` limpio, escribe _tes
 y intenta tener revisiones de código. Si no, intenta cubrir el máximo de cosas con
 `Typescript` que como ya hemos dicho, es una muy buena alternativa.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 function combina(valor1, valor2) {
@@ -712,7 +712,7 @@ function combina(valor1, valor2) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function combina(valor1, valor2) {
@@ -728,7 +728,7 @@ Muchas veces, al interntar optimizar tu código... estás perdiendo el tiempo.
 para ver donde falta optimización. Pon el foco en éstas hasta que estén arregladas/hechas
 si es que se pueden.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 // En los navegadores antiguos, cada iteración en la que `list.length` no esté cacheada
@@ -738,7 +738,7 @@ for (let i = 0, tamaño = lista.length; i < tamaño; i++) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 for (let i = 0; i < lista.length; i++) {
@@ -752,7 +752,7 @@ El código inútil es tan malo como la duplicación. No hay razón alguna para
 mantenerlo en tu código. Si no está siendo usado por nadie, ¡Bórralo! Siempre
 estará disponible en sistema de versiones para el caso que lo necesites.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 function antiguoModuloDePeticiones(url) {
@@ -767,7 +767,7 @@ const peticion = nuevoModuloDePeticiones;
 calculadorDeInventario("manzanas", peticion, "www.inventory-awesome.io");
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function nuevoModuloDePeticiones(url) {

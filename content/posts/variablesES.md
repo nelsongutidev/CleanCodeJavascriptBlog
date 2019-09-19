@@ -10,13 +10,13 @@ lang: "es"
 
 ### Utiliza nombres con sentido y de fácil pronunciación para las variables
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 const yyyymmdstr = moment().format("YYYY/MM/DD");
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 const fechaACtual = moment().format("YYYY/MM/DD");
@@ -24,7 +24,7 @@ const fechaACtual = moment().format("YYYY/MM/DD");
 
 ### Utiliza el mismo tipo de vocabulario para el mismo tipo de variables
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 conseguirInformacionUsuario();
@@ -32,7 +32,7 @@ conseguirDatosCliente();
 conseguirRegistroCliente();)
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 conseguirUsuario();
@@ -48,14 +48,14 @@ Haz tus variables sean fáciles de entender y buscar. Herramientas como
 [ESLint](https://github.com/eslint/eslint/blob/660e0918933e6e7fede26bc675a0763a6b357c94/docs/rules/no-magic-numbers.md)
 pueden ayudan a identificar constantes no nombradas.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 // Para que cojones sirve 86400000?
 setTimeout(blastOff, 86400000);
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 // Declaralas como constantes nombradas
@@ -66,7 +66,7 @@ setTimeout(blastOff, MILISEGUNDOS_POR_DIA);
 
 ### Utiliza variables explicativas
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 const direccion = "Calle Mallorca, Barcelona 95014";
@@ -77,7 +77,7 @@ guardarCP(
 );
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 const direccion = "One Infinite Loop, Cupertino 95014";
@@ -91,7 +91,7 @@ guardarCP(ciudad, codigoPostal);
 
 Explícito es mejor que implícito.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 const ciudades = ["Barcelona", "Madrid", "Sitges"];
@@ -106,7 +106,7 @@ ciudades.forEach(l => {
 });
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 const ciudades = ["Barcelona", "Madrid", "Sitges"];
@@ -124,7 +124,7 @@ ciudades.forEach(direccion => {
 
 Si tu nombre de clase/objeto ya dice algo, no lo repitas en tu nombre de variable
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 const Coche = {
@@ -138,7 +138,7 @@ function pintarCoche(coche) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 const Coche = {
@@ -160,7 +160,7 @@ valor del parámetro sea `undefined`. Otros valores "falsos" como `''`, `" "`,
 `false`,`null`, `0` y `NaN`, no serán reemplazado por un valor predeterminado
 pues se consideran valores como tal.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 function crearMicroCerveceria(nombre) {
@@ -169,7 +169,7 @@ function crearMicroCerveceria(nombre) {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function crearMicroCerveceria(nombre = "Hipster Brew Co.") {

@@ -19,7 +19,7 @@ que simplemente accediendo a esa propiedad del objeto. ¿Por qué?
 - Es sencillo añadir mensajes y manejos de error cuando hacemos `get` y `set`
 - Te permite poder hacer lazy load en caso de que los datos se recojan de una Base de Datos (bbdd)
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 function crearCuentaBancaria() {
@@ -35,7 +35,7 @@ const cuenta = crearCuentaBancaria();
 cuenta.balance = 100;
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function crearCuentaBancaria() {
@@ -68,7 +68,7 @@ cuenta.introducirBalance(100);
 
 Esto se puede hacer mediante `clojures` _(de ES5 en adelante)_.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 const Empleado = function(nombre) {
@@ -85,7 +85,7 @@ delete empleado.nombre;
 console.log(`Nombre del empleado: ${empleado.cogerNombre()}`); // Nombre del empleado: undefined
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 function crearEmpleado(name) {
