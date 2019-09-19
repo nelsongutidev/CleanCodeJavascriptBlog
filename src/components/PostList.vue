@@ -1,9 +1,16 @@
 <template>
   <div class="post-list">
     <hr class="line" />
-    <p class="date">Part {{ post.order }}</p>
-    <h1 class="title" v-html="post.title" />
-    <p class="description" v-html="post.description" />
+    <div v-if="language === 'en'">
+      <p class="date">Part {{ post.order }}</p>
+    </div>
+    <div v-else>
+      <p class="date">Parte {{ post.order }}</p>
+    </div>
+    <g-link :to="post.path" class="headerLink">
+      <h1 class="title" v-html="post.title" />
+    </g-link>
+    <!-- <p class="description" v-html="post.description" /> -->
     <div v-if="language === 'en'">
       <b>{{post.timeToRead}} min read</b> &nbsp;
       <g-link :to="post.path" class="read">Read More...</g-link>
@@ -39,6 +46,15 @@ export default {
   color: #333;
   text-decoration: underline;
   text-decoration-color: hsl(208, 59%, 26%);
+}
+
+a.headerLink {
+  color: #333;
+  text-decoration: none;
+}
+
+a.headerLink:hover {
+  text-decoration: underline;
 }
 
 .read:hover {

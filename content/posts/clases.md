@@ -17,7 +17,7 @@ las clases ES2015/ES6. De todas las maneras, deberías preferir pequeñas funcio
 antes que ponerte a hacer clases. Solo cuando tengas un código largo o cuando veas
 necesaria la implementación de clases, añádelas.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 const Animal = function(edad) {
@@ -57,7 +57,7 @@ Humano.prototype.constructor = Humano;
 Humano.prototype.hablar = function hablar() {};
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 class Animal {
@@ -102,7 +102,7 @@ tu código. En las funciones de tu clase, sencillamente retorna `this` al final 
 cada una y con eso, tienes todo lo necesario pra poder anidar las llamadas a las
 funciones.
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 class Coche {
@@ -134,7 +134,7 @@ coche.introducirColor("rosa");
 coche.guardar();
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 class Coche {
@@ -193,7 +193,7 @@ la herencia tiene más sentido que la composición:
 3. Quieres hacer cambios generales a clases derivadas cambiando la clase base.
    (Cambiar el consumo de calorías a todos los animales mientras se mueven)
 
-**🙅‍ Mal:**
+Mal:
 
 ```javascript
 class Empleado {
@@ -217,7 +217,7 @@ class InformacionImpuestosEmpleado extends Empleado {
 }
 ```
 
-**👨‍🏫 Bien:**
+Bien:
 
 ```javascript
 class InformacionImpuestosEmpleado {
