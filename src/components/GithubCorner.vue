@@ -1,7 +1,7 @@
 <template>
   <div>
     <a
-      href="https://github.com/nelsongv/CleanCodeJavascriptBlog"
+      href="https://github.com/nelsonGuti/CleanCodeJavascriptBlog"
       class="github-corner"
       aria-label="View source on Github"
     >
